@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Obligatorio</title>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="cabezal" class="clearfix">
+            <img
+              id="logo"
+              src="img\descarga.png"
+              alt="logo"
+            /> 
+            <ul id="navPrincipal">
+              <li>
+                <a id="aMaquinas">Maquinas</a>
+              </li>
+              <li>
+                <a id="aInstanciasAlquiladas">Instancias Alquiladas</a>
+              </li>
+              <li>
+                <a id="aSeccionCostes">Costes</a>
+              </li>
+              <li>
+                <a id="aGestionUsuarios">Gestión Usuarios</a>
+              </li>
+              <li>
+                <a id="aGestionStock">Gestión Stock</a>
+              </li>
+              <li>
+                <a id="aSeccionInformes">Informes</a>
+              </li>
+            </ul>
+            <!-- FIN AUX -->
+        </div>
+
+    <div id="contenido">
+        <!--  Inicio Registro  -->
+        <div id="seccionRegistro" class="seccionPagina">
+        <h1>Registrarse</h1>
+        <label for="txtNombre">Nombre:</label>
+        <input type="text" id="txtNombre">
+        <br>    
+        <label for="txtApellido">Apellido:</label>
+        <input type="text" id="txtApellido">
+        <br>
+        <label for="txtNombreUsuario">Nombre de usuario:</label>
+        <input type="text" id="txtNombreUsuario">
+        <br>
+        <label for="txtContraseña">Contraseña:</label>
+        <input type="text" id="txtContraseña">
+        <br>
+        <label for="txtTarjeta">Número de tarjeta de crédito:</label>
+        <input type="text" id="txtTarjeta">
+        <br>
+        <label for="txtCvc" class="inputMitad" >CVC (Código de seguridad)</label>
+        <input type="text" id="txtCvc">
+        <br>
+        <p id="pMensaje"></p>
+        <a id="aIngresar" href="#">Ya estas registrado? Inicia sesion.</a>>
+        <br>
+        <br>
+        <input type="button" id="btnRegistro" value="Registrarse">
+        </div>
+        <!--  Fin Registro  -->
+
+        <!--  Inicio Login  -->
+        <div id="seccionInicioSesion" class="seccionPagina">
+        <h1>Iniciar sesion</h1>
+        <label for="txtNombreInicioSesion">Nombre de usuario:</label>
+        <br>
+        <input type="text" id="txtNombreInicioSesion">
+        <br>
+        <br>
+        <label for="txtContrasenaInicioSesion">Contraseña:</label>
+        <br>
+        <input type="text" id="txtContrasenaInicioSesion">
+        <br>
+        <p id="pErrorIncioSesion"></p>
+        <a id="aRegistrarse" href="#">No tienes cuenta? Crea una.</a>
+        <br>
+        <br>
+        <input type="button" id="btnIniciarSesion" value="Iniciar Sesión">
+        </div>
+        <!--  Fin Login  -->
+
+        <!--  Inicio Elegir maquinas  -->
+        <div id="seccionElegirMaquinas" class="seccionPagina">
+        <h1>Elije una máquina</h1>
+
+        <select id="slcMaquina">
+            <option value="-1">Todas la opciones</option>
+            <option value="compuesto">Optimizadas para computo</option>
+            <option value="memoria">Optimizadas para memoria</option>
+            <option value="almacenamiento">Optimizadas para almacenamiento
+            </option>
+        </select>
+
+        <table border="1">
+        <thead>
+            <th>Instancia</th>
+            <th>Costo Alquiler</th>
+            <th>Costo Encendido</th>
+            <th>Alquilar</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>c7.small</td>
+                <td>USD 20</td>
+                <td>USD 2.50</td>
+                <td><input type="button" value="Alquilar"></td>
+            </tr>
+                <tr>
+                    <td>r7.small</td>
+                    <td>USD 15</td>
+                    <td>USD 3.50</td>
+                    <td><input type="button" value="Alquilar"></td>
+                </tr>
+                <tr>
+                    <td>i7.large</td>
+                    <td>USD 45</td>
+                    <td>USD 2.55</td>
+                    <td><input type="button" value="Alquilar"></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <!--  Fin Elegir maquinas  -->
+
+        <!--  Inicio Listado de instancias alquiladas  -->
+        <div id="seccionInstanciasAlquiladas" class="seccionPagina">
+        <h1>Instancias alquiladas</h1>
+        <select id="slcInstanciasAlquiladas">
+            <option value="">Todas las maquinas</option>
+            <option value="">Encendidas</option>
+            <option value="">Apagadas</option>
+        </select>
+        <table border="1">
+            <thead>
+                <th>Instancia</th>
+                <th>Estado</th>
+                <th>Veces iniciada</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maquina 1</td>
+                    <td>Encendida 2</td>
+                    <td>5 veces</td>
+                    <td><input type="button" value="Apagar"></td>
+                </tr>
+                <tr>
+                    <td>Maquina 2</td>  
+                    <td>Encendida</td>
+                    <td>2 veces</td>
+                    <td><input type="button" value="Apagar"></td>
+                </tr>
+                <tr>
+                    <td>Maquina 3</td>
+                    <td>Apagada</td>
+                    <td>1 vez</td>
+                    <td><input type="button" value="Encender"></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <!--  Fin Listado de instancias alquiladas  -->
+
+        <!--  Inicio Listado de costes  -->
+    <div id="seccionCostes" class="seccionPagina">
+        <h1>Costo total de alquiler</h1>
+        <table border="1">
+            <tr>
+                <th>Tipo de instancia</th>
+                <th>Costo por encendido</th>
+                <th>Total de veces encendida</th>
+                <th>Costo total</th>
+            </tr>
+            <tr>
+                <td>Máquina 1</td>
+                <td>$ Precio</td>
+                <td>Veces encendidas</td>
+                <td>$$$</td>
+            </tr>
+            <tr>
+                <td>Máquina 2</td>
+                <td>$ Precio</td>
+                <td>Veces encendidas</td>
+                <td>$$$</td>
+            </tr>
+        </table>
+    </div>
+        <!--  Fin Listado de costes  -->
+        <!--  Inicio Gestion de usuarios  -->
+        <div id="seccionGestionDeUsuarios" class="seccionPagina">
+        <h1>Aprobación de registro de Usuarios</h1>
+
+        <table border="1">
+            <tr>
+                <th>Usuario</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td>Usuario x</td>
+                <td>
+                    <select id="slcEstado">
+                        <option value="pendiente">Pendiente</option>
+                        <option value="activo">Activo</option>
+                        <option value="bloqueado">Bloqueado</option>
+                    </select>
+            </td>
+            </tr>
+            <tr>
+                <td>Usuario y</td>
+                <td>
+                    <select id="slcEstado">
+                        <option value="pendiente">Pendiente</option>
+                        <option value="activo">Activo</option>
+                        <option value="bloqueado">Bloqueado</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Usuario z</td>
+                <td>
+                    <select id="slcEstado">
+                        <option value="pendiente">Pendiente</option>
+                        <option value="activo">Activo</option>
+                        <option value="bloqueado">Bloqueado</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        </div>
+        <!--  Fin Gestion de usuarios  -->
+        <!--  Inicio Gestion de stock  -->
+        <div id="seccionGestionStock" class="seccionPagina">
+        <h1>Modificar stock</h1>
+        <select id="slcMaquinaModificar">
+            <option value="">Maquina 1</option>
+            <option value="">Maquina 2</option>
+            <option value="">Maquina 3</option>
+            <option value="">Maquina 4</option>
+        </select>
+        <br>
+        <br>
+        <label for="txtNuevoStock">Ingrese nuevo stock</label>
+        <input type="text" id="txtNuevoStock">
+        </div>
+        <!--  Fin Gestion de stock  -->
+        <!--  Inicio Listado de Informes  -->
+        <div id="seccionInformes" class="seccionPagina">
+        <h1>Informe de máquinas virtuales</h1>
+
+        <table border="1">
+            <tr>
+                <th>Tipo de instancia de alquiler</th>
+                <th>Cantidad</th>
+                <th>Ingreso total</th>
+            </tr>
+            <tr>
+                <td>c7.large</td>
+                <td>4</td>
+                <td>$76449</td>
+            </tr>
+            <tr>
+                <td>r7.small</td>
+                <td>1</td>
+                <td>$23543</td>
+            </tr>
+            <tr>
+                <td>i7.medium</td>
+                <td>7</td>
+                <td>$10234</td>
+            </tr>
+        </table>
+
+        <p> Total de ingresos: $x</p>
+        </div>
+        <!--  Fin Listado de Informes  -->
+    </div>
+    </div>
+
+    <script src="js/clases.js"></script>
+    <script src="js/script.js"></script>    
+</body>
+</html>
